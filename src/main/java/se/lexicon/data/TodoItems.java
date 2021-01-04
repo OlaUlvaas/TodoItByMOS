@@ -67,8 +67,7 @@ public class TodoItems {
 
         Todo[] done = new Todo[countDone]; //3
         Todo[] unDone = new Todo[countUnDone];
-        int lengthDone = countDone;
-        int lengthUnDone = countUnDone;//2
+
         int j = 0;
         int k = 0;
 
@@ -152,7 +151,7 @@ public class TodoItems {
         }
         return thingsIShouldDo;
     }
-    public int remove(int removePerson_Id) {
+    /*public int remove(int removePerson_Id) {
         int index = 0;
         for(int i = 0; i < todoItemsArray.length ; i++){
           If(todoItemsArray[i].getAssignee().getPERSONID() == removePerson_Id){
@@ -160,10 +159,10 @@ public class TodoItems {
             }
         }
         return index;
-        /*Person[] newPeopleArray = Arrays.copyOf(peopleArray, peopleArray.length + 1);
+        *//*Person[] newPeopleArray = Arrays.copyOf(peopleArray, peopleArray.length + 1);
         newPeopleArray[newPeopleArray.length - 1] = newPerson;
-        peopleArray = newPeopleArray;*/
-    }
+        peopleArray = newPeopleArray;*//*
+    }*/
     /*Hitta index
     splitta före index spara i array
     splitta efter index spara i array

@@ -5,19 +5,26 @@ import org.junit.Test;
 import se.lexicon.data.People;
 import se.lexicon.model.Person;
 public class PeopleTest {
-    private Person[] testPeople1 = new Person[2];
+    private Person[] testPeople1 = new Person[3];
     private Person testPeoplePerson1 = new Person();
     private Person testPeoplePerson2 = new Person();
+    private Person testPeoplePerson3 = new Person();
+
     @Before
     public void setup (){
-        testPeoplePerson1.getPERSONID();
+        //testPeoplePerson1.getPERSONID();
         testPeoplePerson1.setFirstName("Mikael");
         testPeoplePerson1.setLastName("Aurell");
-        testPeoplePerson2.getPERSONID();
+        //testPeoplePerson2.getPERSONID();
         testPeoplePerson2.setFirstName("Ola");
         testPeoplePerson2.setLastName("Kula");
+        //testPeoplePerson3.getPERSONID();
+        testPeoplePerson3.setFirstName("Sebbe");
+        testPeoplePerson3.setLastName("Picaso");
         testPeople1[0] = testPeoplePerson1;
         testPeople1[1] = testPeoplePerson2;
+        testPeople1[2] = testPeoplePerson3;
+
     }
     @Test
     public void testAddPerson(){
@@ -45,4 +52,16 @@ public class PeopleTest {
         testClear.clear();
         Assert.assertNull(null,testClear.findAll());
     }
+    @Test
+    public void testRemove() {
+        People testRemovePerson = new People();        //Index
+        testRemovePerson.addPerson(testPeoplePerson1); //0 Micke
+        testRemovePerson.addPerson(testPeoplePerson2); //1 Ola
+        testRemovePerson.addPerson(testPeoplePerson3); //2 Sebbe
+
+        testRemovePerson.remove(2);
+
+        //Assert.assertEquals(testPeoplePerson3.getPERSONID(), testRemovePerson.findAll()[1].getPERSONID());
+    }
+
 }
