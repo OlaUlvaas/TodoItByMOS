@@ -24,14 +24,20 @@ import java.lang.Comparable;
 import se.lexicon.model.Person;
 import se.lexicon.model.Todo;
 import java.util.Arrays;
+
+import static java.util.Arrays.*;
+
 public class TodoItems {
     private static Todo[] todoItemsArray = new Todo[0];
+
     public int size() {
         return todoItemsArray.length;
     }
+
     public Todo[] findAllThingsTodo() {
         return todoItemsArray;
     }
+
     public Todo findByTodoId(int todo_Id) {
         Todo findTodo = new Todo();
         int tempTODOID = 0;
@@ -43,12 +49,14 @@ public class TodoItems {
         }
         return findTodo;
     }
+
     public void addTodo(Todo newThingTodo) {
-        Todo[] newtodoItemsArray = Arrays.copyOf(todoItemsArray, todoItemsArray.length + 1);
+        Todo[] newtodoItemsArray = copyOf(todoItemsArray, todoItemsArray.length + 1);
         newtodoItemsArray[newtodoItemsArray.length - 1] = newThingTodo;
         todoItemsArray = newtodoItemsArray;
     }
-    public void clear (){
+
+    public void clear() {
         todoItemsArray = null;
         //Arrays.fill(peopleArray, null);
     }
