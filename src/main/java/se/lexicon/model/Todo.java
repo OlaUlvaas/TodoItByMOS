@@ -7,6 +7,7 @@ public class Todo {
     private String description;
     private boolean done;
     private Person assignee;
+
     public Todo() {
         TODOID = TodoSequencer.nextTodoId();
     }

@@ -4,12 +4,25 @@ import org.junit.Before;
 import org.junit.Test;
 import se.lexicon.data.TodoItems;
 import se.lexicon.model.Todo;
+import se.lexicon.model.Person;
 public class TodoItemsTest {
     private Todo[] testMissions = new Todo[2];
     private Todo testMission1 = new Todo();
     private Todo testMission2 = new Todo();
     @Before
     public void setupTodo (){
+        person1.getPERSONID();
+        person1.setFirstName("Sebastian");
+        person1.setLastName("Bocaciu");
+
+        person2.getPERSONID();
+        person2.setFirstName("Mikael");
+        person2.setLastName("Aurell");
+
+        person3.getPERSONID();
+        person3.setFirstName("Ola");
+        person3.setLastName("Ulvås");
+
         testMission1.getTODOID();
         testMission1.setDescription("Catch the Mouse");
         testMission1.setDone(true);
