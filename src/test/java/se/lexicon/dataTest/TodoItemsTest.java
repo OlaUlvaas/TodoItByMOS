@@ -2,13 +2,14 @@ package se.lexicon.dataTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import se.lexicon.data.People;
 import se.lexicon.data.TodoItems;
 import se.lexicon.model.Todo;
 import se.lexicon.model.Person;
 public class TodoItemsTest {
-    private Todo[] testMissions = new Todo[2];
-    private Todo[] testMissions2 = new Todo[2];
-    private Todo[] testMissions3 = new Todo[2];
+    private Todo[] testMissions = new Todo[3];
+    private Todo[] testMissions2 = new Todo[3];
+    private Todo[] testMissions3 = new Todo[3];
     private Todo testMission1 = new Todo();
     private Todo testMission2 = new Todo();
     private Todo testMission3 = new Todo();
@@ -53,9 +54,15 @@ public class TodoItemsTest {
 
         testMissions[0] = testMission1;
         testMissions[1] = testMission2;
+        testMissions[2] = testMission3;
+
+        testMissions2[0] = testMission1;
+        testMissions2[1] = testMission2;
+        testMissions2[2] = testMission3;
 
         testMissions3[0] = testMission1;
-        testMissions3[1] = testMission3;
+        testMissions3[1] = testMission2;
+        testMissions3[2] = testMission3;
 
     }
     @Test
@@ -120,12 +127,19 @@ public class TodoItemsTest {
         testFindByUnAssignee.addTodo(testMission4);
         Assert.assertNull(null, (testFindByUnAssignee.findUnassignedTodoItems()[0].getAssignee()));
     }
-    /*@Test
-    public void testBinarySearch(){
-        TodoItems testBinarySearch = new TodoItems();
-        testBinarySearch.addTodo(testMission1);
-        testBinarySearch.addTodo(testMission2);
-        testBinarySearch.addTodo(testMission3);
-        Assert.assertEquals(2,);
-    }*/
+    @Test
+    public void testRemoveTodo() {
+        TodoItems testRemoveTodo = new TodoItems();  //Index
+        testRemoveTodo.addTodo(testMission1); //0 Catch the Mouse
+        testRemoveTodo.addTodo(testMission2); //1 Buy a new Car
+        testRemoveTodo.addTodo(testMission3); //2 Buy a new Porsche
+        System.out.println("testRemovePerson.size() = " + testRemoveTodo.size());
+        testRemoveTodo.removeTodo(2);
+        System.out.println("testRemovePerson.size() = " + testRemoveTodo.size());
+
+        int expectedLength = 2;
+        int actualLength = testRemoveTodo.size();
+        Assert.assertEquals(expectedLength, actualLength);
+
+    }
 }

@@ -3,7 +3,6 @@ import java.util.Scanner;
 import se.lexicon.data.TodoSequencer;
 public class Todo {
     private final int TODOID;
-    // private static int sequencerTodoId = 0;
     private String description;
     private boolean done;
     private Person assignee;
@@ -31,10 +30,7 @@ public class Todo {
         this.done = done;
     }
     public Person getAssignee() {
-        //Scanner scannerTempAssignee = new Scanner(System.in);
-        //System.out.println("Pick a assignee: ");
-        //int assigneeTempId = scannerTempAssignee.nextInt();
-        //If (Person)
+
         return assignee;
     }
     public void setAssignee(Person assignee) {

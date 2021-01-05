@@ -58,10 +58,14 @@ public class PeopleTest {
         testRemovePerson.addPerson(testPeoplePerson1); //0 Micke
         testRemovePerson.addPerson(testPeoplePerson2); //1 Ola
         testRemovePerson.addPerson(testPeoplePerson3); //2 Sebbe
-
+        System.out.println("testRemovePerson.size() = " + testRemovePerson.size());
         testRemovePerson.remove(2);
+        System.out.println("testRemovePerson.size() = " + testRemovePerson.size());
 
-        //Assert.assertEquals(testPeoplePerson3.getPERSONID(), testRemovePerson.findAll()[1].getPERSONID());
+        int expectedLength = 2;
+        int actualLength = testRemovePerson.size();
+        Assert.assertEquals(expectedLength, actualLength);
+
     }
 
 }
