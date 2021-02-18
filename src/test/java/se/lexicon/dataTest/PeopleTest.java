@@ -2,7 +2,6 @@ package se.lexicon.dataTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import se.lexicon.data.People;
 import se.lexicon.model.Person;
 public class PeopleTest {
     private Person[] testPeople1 = new Person[3];

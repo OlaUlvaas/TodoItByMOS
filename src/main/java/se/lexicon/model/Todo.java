@@ -1,8 +1,7 @@
 package se.lexicon.model;
 import java.time.LocalDate;
 import java.util.Objects;
-import java.util.Scanner;
-import se.lexicon.data.TodoSequencer;
+
 public class Todo {
 
     private int todo_id;

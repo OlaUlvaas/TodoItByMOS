@@ -2,8 +2,6 @@ package se.lexicon.dataTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import se.lexicon.data.People;
-import se.lexicon.data.TodoItems;
 import se.lexicon.model.Todo;
 import se.lexicon.model.Person;
 public class TodoItemsTest {

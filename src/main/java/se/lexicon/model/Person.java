@@ -1,5 +1,4 @@
 package se.lexicon.model;
-import se.lexicon.data.PersonSequencer;
 
 import java.util.Objects;
 
