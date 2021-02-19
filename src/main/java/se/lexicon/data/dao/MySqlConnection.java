@@ -1,4 +1,4 @@
-package se.lexicon.dao.db;
+package se.lexicon.data.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

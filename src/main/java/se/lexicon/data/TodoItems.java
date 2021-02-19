@@ -1,25 +1,25 @@
 package se.lexicon.data;
 
 import se.lexicon.model.Person;
-import se.lexicon.model.Todo;
+import se.lexicon.model.Todo_Item;
 
 import java.util.Collection;
 
 public interface TodoItems {
 
-    Todo create(Todo todo);
+    Todo_Item create(Todo_Item todoItem);
 
-    Collection<Todo> findAll();
+    Collection<Todo_Item> findAll();
 
-    Todo findById(int id);
+    Todo_Item findById(int id);
 
-    Collection<Todo> findByDoneStatus(boolean done);
+    Collection<Todo_Item> findByDoneStatus(boolean done);
 
-    Collection<Todo> findByAssignee(Person person);
+    Collection<Todo_Item> findByAssignee(Person person);
 
-    Collection<Todo> findByUnassignedTodoItems();
+    Collection<Todo_Item> findByUnassignedTodoItems();
 
-    Todo update(Todo todo);
+    Todo_Item update(Todo_Item todoItem);
 
     boolean deleteById(int id);
 

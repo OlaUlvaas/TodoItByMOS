@@ -2,7 +2,7 @@ package se.lexicon.model;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Todo {
+public class Todo_Item {
 
     private int todo_id;
     private String title;
@@ -11,17 +11,17 @@ public class Todo {
     private boolean done;
     private int assignee_id;
 
-    public Todo() {
+    public Todo_Item() {
 
     }
-    public Todo(String title, String description, LocalDate deadline, boolean done) {
+    public Todo_Item(String title, String description, LocalDate deadline, boolean done) {
         this.title = title;
         this.description = description;
         this.deadline = deadline;
         this.done = done;
         this.assignee_id = assignee_id;
     }
-    public Todo(String title, String description, LocalDate deadline, boolean done, int assignee_id) {
+    public Todo_Item(String title, String description, LocalDate deadline, boolean done, int assignee_id) {
         this.title = title;
         this.description = description;
         this.deadline = deadline;
@@ -29,7 +29,7 @@ public class Todo {
         this.assignee_id = assignee_id;
     }
 
-    public Todo(int todo_id, String title, String description, LocalDate deadline, boolean done) {
+    public Todo_Item(int todo_id, String title, String description, LocalDate deadline, boolean done) {
         this.todo_id = todo_id;
         this.title = title;
         this.description = description;
@@ -37,7 +37,7 @@ public class Todo {
         this.done = done;
         this.assignee_id = assignee_id;
     }
-    public Todo(int todo_id, String title, String description, LocalDate deadline, boolean done, int assignee_id) {
+    public Todo_Item(int todo_id, String title, String description, LocalDate deadline, boolean done, int assignee_id) {
         this.todo_id = todo_id;
         this.title = title;
         this.description = description;
@@ -98,8 +98,8 @@ public class Todo {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Todo todo = (Todo) o;
-        return todo_id == todo.todo_id && done == todo.done && assignee_id == todo.assignee_id && Objects.equals(title, todo.title) && Objects.equals(description, todo.description) && Objects.equals(deadline, todo.deadline);
+        Todo_Item todoItem = (Todo_Item) o;
+        return todo_id == todoItem.todo_id && done == todoItem.done && assignee_id == todoItem.assignee_id && Objects.equals(title, todoItem.title) && Objects.equals(description, todoItem.description) && Objects.equals(deadline, todoItem.deadline);
     }
 
     @Override
