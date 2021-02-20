@@ -1,4 +1,5 @@
 package se.lexicon.model;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -46,6 +47,9 @@ public class Todo_Item {
         this.assignee_id = assignee_id;
     }
 
+
+
+
     public int getTodo_id() {
         return todo_id;
     }
@@ -77,6 +81,7 @@ public class Todo_Item {
     public void setDeadline(LocalDate deadline) {
         this.deadline = deadline;
     }
+
 
     public boolean isDone() {
         return done;
